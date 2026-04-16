@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">⬛ Bugiz</div>
+
+  <a href="view-all.html" class="nav-item">View All Tickets</a>
+  <a href="projects.html" class="nav-item"><strong>Projects</strong></a>
+
+
+
+
+<select 
+  id="status-nav" 
+  class="status-dropdown"
+  onchange="if (this.value) window.location.href = this.value;"
+>
+  <option value="">Status</option>
+  <option value="completed.html">Completed</option>
+  <option value="in-progress.html">In Progress</option>
+  <option value="overdue.html">Overdue</option>
+</select>
+
+
+  <a href="create-ticket.html" class="nav-item">Create Ticket</a>
+  <a href="create-project.html" class="nav-item">Create Project</a>
+  <a href="create-user.html" class="nav-item">Add User</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="topbar">
+    <div class="search">
+      <input placeholder="Search Projects">
+      <button>Search</button>
+    </div>
+
+    <div class="profile">
+      <div class="avatar"></div>
+      <div>
+        UserName<br>
+        <a href="login.html">Log out</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Projects</h1>
+
+    <div class="table-header">
+      <div>Project Name</div>
+      <div>Project ID</div>
+      <div>Tickets</div>
+      <div>Status</div>
+      <div>Edit</div>
+      <div>View</div>
+    </div>
+
+    <div class="ticket-row">
+      <div>Project Alpha</div>
+      <div>PJ001</div>
+      <div>12</div>
+      <div>Active</div>
+      <div><span class="btn btn-blue">Edit</span></div>
+      <div><span class="btn btn-blue">View</span></div>
+    </div>
+
+    <div class="ticket-row">
+      <div>Project Beta</div>
+      <div>PJ002</div>
+      <div>6</div>
+      <div>Completed</div>
+      <div><span class="btn btn-blue">Edit</span></div>
+    <div><span class="btn btn-blue">View</span></div>
+    </div>
+  </div>
+
+  <footer></footer>
+</div>
+
+</body>
+</html>

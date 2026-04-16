@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">⬛ Bugiz</div>
+
+  <a href="view-all.html" class="nav-item">View All Tickets</a>
+
+  <a href="projects.html" class="nav-item">Projects</a>
+
+
+
+<select 
+  id="status-nav" 
+  class="status-dropdown"
+  onchange="if (this.value) window.location.href = this.value;"
+>
+  <option value="">Status</option>
+  <option value="completed.html">Completed</option>
+  <option value="in-progress.html">In Progress</option>
+  <option value="overdue.html">Overdue</option>
+</select>
+
+  <a href="create-ticket.html" class="nav-item">Create Ticket</a>
+  <a href="create-project.html" class="nav-item"><strong>Create Project</strong></a>
+  <a href="create-user.html" class="nav-item">Add User</a>
+</div>
+
+<div class="main">
+  <div class="topbar">
+    <div class="search">
+      <input placeholder="Search">
+      <button>Search</button>
+    </div>
+    <div class="profile">
+      <div class="avatar"></div>
+      <div>UserName<br>
+        <a href="login.html">Log out</a>
+      </div>
+    </div>
+  </div>
+
+
+<div class="content form-center">
+  <h1>Create New Project</h1>
+
+  <div class="form-row">
+    <input placeholder="Project Name">
+    <input placeholder="Project ID">
+  </div>
+
+  <input placeholder="Project Summary">
+  <textarea placeholder="Project Description"></textarea>
+
+  <div class="btn-row">
+    <button class="btn btn-black">Cancel</button>
+    <button class="btn">Confirm</button>
+  </div>
+</div>
+
+<footer></footer>
+</div>
+</body>
+</html>

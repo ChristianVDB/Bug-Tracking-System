@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Ensures proper character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive -->
+  <title>Bug Tracking System</title>
+  <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+</head>
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <div class="container">
+      <h1>🐞 Bug Tracking System</h1> <!-- Main title -->
+      <!-- Navigation menu for quick access to sections -->
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#create-issue">Create Issue</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#people">People</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <!-- DASHBOARD SECTION: Displays all issues in a grid -->
+    <section id="dashboard">
+      <h2>All Issues</h2>
+      <div class="issue-grid">
+        <!-- Example issue card -->
+        <div class="issue-card">
+          <h3>Login button not working</h3>
+          <p>Status: <span class="status open">Open</span></p>
+          <p>Priority: <span class="priority high">High</span></p>
+          <button class="btn">View Details</button>
+        </div>
+        <div class="issue-card">
+          <h3>Image previews not generating</h3>
+          <p>Status: <span class="status overdue">Overdue</span></p>
+          <p>Priority: <span class="priority medium">Medium</span></p>
+          <button class="btn">View Details</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATE ISSUE SECTION: Form for adding new issues -->
+    <section id="create-issue">
+      <h2>Create New Issue</h2>
+      <form id="issue-form" class="form-card">
+        <!-- Summary field -->
+        <label>Summary:</label>
+        <input type="text" name="summary" required>
+
+        <!-- Detailed description -->
+        <label>Description:</label>
+        <textarea name="description" required></textarea>
+
+        <!-- Project dropdown -->
+        <label>Project:</label>
+        <select name="project">
+          <option value="Project A">Project A</option>
+          <option value="Project B">Project B</option>
+        </select>
+
+        <!-- Assigned person dropdown -->
+        <label>Assigned To:</label>
+        <select name="assigned">
+          <option value="User1">User1</option>
+          <option value="User2">User2</option>
+        </select>
+
+        <!-- Status dropdown -->
+        <label>Status:</label>
+        <select name="status">
+          <option value="open">Open</option>
+          <option value="resolved">Resolved</option>
+          <option value="overdue">Overdue</option>
+        </select>
+
+        <!-- Priority dropdown -->
+        <label>Priority:</label>
+        <select name="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn primary">Add Issue</button>
+      </form>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="list-card">
+        <li>Project A</li>
+        <li>Project B</li>
+      </ul>
+    </section>
+
+    <!-- PEOPLE SECTION -->
+    <section id="people">
+      <h2>People</h2>
+      <ul class="list-card">
+        <li>User1 - user1@example.com</li>
+        <li>User2 - user2@example.com</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Bug Tracking System</p>
+  </footer>
+</body>
+</html>
