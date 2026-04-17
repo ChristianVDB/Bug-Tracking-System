@@ -1,5 +1,5 @@
 /* RESET */
-* {
+ {
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
@@ -10,9 +10,10 @@
 body {
   display: flex;
   min-height: 100vh;
-  background: #f6f8fb;
+  background: linear-gradient(180deg, #d6e1f7, #2e3e5c);
   color: #333;
 }
+
 
 /* ===== SIDEBAR ===== */
 .sidebar {
@@ -20,11 +21,10 @@ body {
   background: linear-gradient(180deg, #1f2a40, #2e3e5c);
   color: #fff;
   padding: 30px 20px;
-  font-size: 25px;
 }
 
 .logo {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -33,10 +33,11 @@ body {
   display: block;
   padding: 10px 12px;
   margin: 6px 0;
-  color: #dbe2f1;
+  color: #d7eff4;
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.2s ease;
+  font-size: 25px;
 }
 
 .nav-item strong {
@@ -50,6 +51,7 @@ body {
 
 /* ===== MAIN AREA ===== */
 .main {
+  
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -57,7 +59,7 @@ body {
 
 /* ===== TOP BAR ===== */
 .topbar {
-  background: #ffffff;
+  background: linear-gradient(180deg, #2e3e5c, #b4c3de);
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -66,28 +68,33 @@ body {
 }
 
 .search {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .search input {
-  padding: 10px 14px;
-  width: 260px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: larger;
+    height: 44px;
+    width: 260px;
+    padding: 0 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
 }
 
 .search button {
-  padding: 10px 18px;
-  border-radius: 6px;
-  background: #4f7cff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: larger;
-
+    height: 44px;
+    padding: 0 26px;
+    border-radius: 6px;
+    background: #4f7cff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: normal; 
 }
+
+
 
 .profile {
   display: flex;
@@ -124,36 +131,58 @@ h1 {
 }
 
 .table-header {
-  font-weight: bold;
-  padding: 12px 0;
-  color: #666;
+    font-weight: bold;
+    padding: 0 16px;       
+    min-height: 48px;      
+    color: #666;
+    
 }
 
 .ticket-row {
-  background: #ffffff;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  margin-bottom: 14px;
+    background: #ffffff;
+    padding: 0 16px;       
+    min-height: 72px;      
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 14px;
 }
 
+
+
+.table-header div,
 .ticket-row div {
-  text-align: center;
+    display: flex;
+    align-items: center;      
+    justify-content: flex-start;
+    text-align: left;
 }
+
+
+
 
 /* ===== AVATARS ===== */
 .small-avatar {
-  width: 36px;
-  height: 36px;
-  background: #111;
-  border-radius: 50%;
-  margin: auto;
+    width: 36px;
+    height: 36px;
+    background: #111; 
+    border-radius: 50%;
 }
+
 
 /* ===== FORMS ===== */
 .form-center {
-  max-width: 700px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: min(1200px, 90%);
+    margin: 0 auto;
+    background: #b2bbc4;
+    padding: 50px 60px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    
+position: relative;
+    z-index: 1;
+
 }
 
 .form-row {
@@ -175,6 +204,11 @@ select {
 textarea {
   min-height: 120px;
 }
+h1 {
+    margin-bottom: 35px;
+    font-size: 34px;
+}
+
 
 /* ===== BUTTONS ===== */
 .btn-row {
@@ -235,7 +269,8 @@ textarea {
 
 /* ===== FOOTER ===== */
 footer {
-  background: #e1e5ec;
+    background: linear-gradient(180deg, #2e3e5c, #d6e1f7);
+
   text-align: center;
   padding: 16px;
   font-size: 14px;
@@ -247,9 +282,10 @@ footer {
   margin-top: 6px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 20px;
+  font-size: 13px;
   background-color: #ffffff;
   cursor: pointer;
+  font-size: 20px;
 }
 
 /* Dark sidebar support */
@@ -328,4 +364,53 @@ footer {
   text-decoration: none;
   margin: 6px;
   width: 120px;
+}
+/* ===== STATUS BUTTONS (INTERACTIVE) ===== */
+
+.status-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+/* Hide the radio inputs */
+.status-buttons input {
+    display: none;
+}
+
+/* Base label styles */
+.status-buttons label {
+    flex: 1;
+    padding: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+
+    opacity: 0.7;
+    transform: scale(1);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+/* Individual colors */
+.status-buttons .resolved { background: #22c55e; }
+.status-buttons .open     { background: #4f7cff; }
+.status-buttons .overdue  { background: #ef4444; }
+
+/* Hover animation */
+.status-buttons label:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Selected state (radio checked) */
+.status-buttons input:checked + label {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
