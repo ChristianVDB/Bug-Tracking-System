@@ -1,40 +1,32 @@
-
-
-function People (FName, LName, id, username, password, email){
-    this.Firstname = 'FName',
-    this.Lastname = 'LName',
-    this.Identification = 'id',
-    this.UserName = 'username',
-    this.Password = 'password',
-    this.Email = 'email'
+function User(id, name, surname, username, password, email) {
+    this.id = id;
+    this.name = name;
+    this.surname = surname;
+    this.username = username;
+    this.password = password;
+    this.email = email;
 }
 
-function Tickets(summary, description, reporter, developer, project, date, status){
-    this.Summary = 'summary',
-    this.Description = 'description',
-    this.Reporter = 'reporter',
-    this.Developer = 'developer',
-    this.Project = 'project',
-    this.Date = 'date',
-    this.Status = 'status'
+function Project(id, name, summary, description) {
+    this.id = id;
+    this.name = name;
+    this.summary = summary;
+    this.description = description;
+    this.status = "Active";
+    this.ticketCount = 0;
 }
 
-
-function Projects(name, identification, summary, description){
-    this.Name = 'name',
-    this.Identification = 'identification',
-    this.Summary = 'summary',
-    this.Description = 'description'
+function Ticket(summary, description, reporter, date, project, developer, status) {
+    this.summary = summary;
+    this.description = description;
+    this.reporter = reporter;
+    this.date = date;
+    this.project = project;
+    this.developer = developer;
+    this.status = status;
 }
 
-function saveToStorage(key, dataArray) {
-    localStorage.setItem(key, JSON.stringify(dataArray));
-}
-
-function getFromStorage(key) {
-    const data = localStorage.getItem(key);
-    return data ? JSON.parse(data) : [];
-}
-
-
-
+const Storage = {
+    saveData: (key, data) => localStorage.setItem(key, JSON.stringify(data)),
+    getData: (key) => JSON.parse(localStorage.getItem(key)) || []
+};
