@@ -13,8 +13,6 @@
 
   <a href="projects.html" class="nav-item">Projects</a>
 
-
-
 <select 
   id="status-nav" 
   class="status-dropdown"
@@ -62,12 +60,17 @@
     <select><option>Team member 1</option></select>
   </div>
 
-  <h3>Status</h3>
   <div class="status-buttons">
-    <div class="resolved">Resolved</div>
-    <div class="open">Open</div>
-    <div class="overdue">Overdue</div>
-  </div>
+    <input type="radio" name="status" id="status-resolved" value="Resolved">
+    <label for="status-resolved" class="resolved">Resolved</label>
+
+    <input type="radio" name="status" id="status-open" value="Open">
+    <label for="status-open" class="open">Open</label>
+
+    <input type="radio" name="status" id="status-overdue" value="Overdue">
+    <label for="status-overdue" class="overdue">Overdue</label>
+</div>
+
 
   <div class="btn-row" style="text-align:right">
     <button class="btn">Cancel</button>
@@ -77,5 +80,6 @@
 
 <footer></footer>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
