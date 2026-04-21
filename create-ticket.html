@@ -2,84 +2,79 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
 <!-- NAV -->
-<div class="sidebar">
-  <div class="logo">⬛ Bugiz</div>
+  <div class="sidebar">
+    <div class="logo">⬛ Bugiz</div>
+    <a href="view-all.html" class="nav-item">Tickets</a>
+    <a href="projects.html" class="nav-item">Projects</a>
 
-  <a href="view-all.html" class="nav-item">View All Tickets</a>
+    <select 
+      id="status-nav" 
+      class="status-dropdown"
+      onchange="if (this.value) window.location.href = this.value;"
+    >
+      <option value="">Status</option>
+      <option value="completed.html">Completed</option>
+      <option value="in-progress.html">In Progress</option>
+      <option value="overdue.html">Overdue</option>
+    </select>
 
-  <a href="projects.html" class="nav-item">Projects</a>
+    <a href="create-ticket.html" class="nav-item"><strong>Create Ticket</strong></a>
+    <a href="create-project.html" class="nav-item">Create Project</a>
+    <a href="create-user.html" class="nav-item">Create User</a>
+  </div>
 
-<select 
-  id="status-nav" 
-  class="status-dropdown"
-  onchange="if (this.value) window.location.href = this.value;"
->
-  <option value="">Status</option>
-  <option value="completed.html">Completed</option>
-  <option value="in-progress.html">In Progress</option>
-  <option value="overdue.html">Overdue</option>
-</select>
-
-  <a href="create-ticket.html" class="nav-item"><strong>Create Ticket</strong></a>
-  <a href="create-project.html" class="nav-item">Create Project</a>
-  <a href="create-user.html" class="nav-item">Add User</a>
-</div>
-
-<div class="main">
-  <div class="topbar">
-    <div class="search">
-      <input placeholder="Search">
-      <button>Search</button>
-    </div>
-    <div class="profile">
-      <div class="avatar"></div>
-      <div>UserName<br>
+  <div class="main">
+    <div class="topbar">
+      <div class="search">
+        <input placeholder="Search">
+      </div>
+      <div class="profile">
+        <div class="avatar"></div>
+        <div>UserName<br>
         <a href="login.html">Log out</a>
       </div>
     </div>
   </div>
 
 
-<div class="content">
-  <h1>Bug Reporting Form</h1>
+  <div class="content">
+    <h1>Bug Reporting Form</h1>
 
-  <input placeholder="Brief summary of the issue">
-  <textarea placeholder="Detailed description"></textarea>
+    <input id="ticket-summary" placeholder="Brief summary of the issue">
+    <textarea id="ticket-description" placeholder="Detailed description"></textarea>
 
-  <div class="form-row">
-    <input placeholder="Who identified the issue">
-    <input type="date">
+    <div class="form-row">
+      <input id="ticket-reporter" placeholder="Who identified the issue">
+      <input id="ticket-date" type="date">
+    </div>
+
+    <div class="form-row">
+      <select id="ticket-project"><option></option></select>
+      <select id="ticket-developer"><option></option></select>
+    </div>
+
+    <div class="status-buttons">
+      <input type="radio" name="status" id="status-resolved" value="Completed">
+      <label for="status-resolved" class="resolved">Resolved</label>
+
+      <input type="radio" name="status" id="status-open" value="In Progress">
+      <label for="status-open" class="open">Open</label>
+
+      <input type="radio" name="status" id="status-overdue" value="Overdue">
+      <label for="status-overdue" class="overdue">Overdue</label>
+    </div>
+
+    <div class="btn-row" style="text-align:right">
+      <button class="btn" onclick="clearTicketForm()">Cancel</button>
+      <button class="btn btn-blue" onclick="createTicket()">Submit form</button>
+    </div>
   </div>
-
-  <div class="form-row">
-    <select><option>Project 1</option></select>
-    <select><option>Team member 1</option></select>
-  </div>
-
-  <div class="status-buttons">
-    <input type="radio" name="status" id="status-resolved" value="Resolved">
-    <label for="status-resolved" class="resolved">Resolved</label>
-
-    <input type="radio" name="status" id="status-open" value="Open">
-    <label for="status-open" class="open">Open</label>
-
-    <input type="radio" name="status" id="status-overdue" value="Overdue">
-    <label for="status-overdue" class="overdue">Overdue</label>
-</div>
-
-
-  <div class="btn-row" style="text-align:right">
-    <button class="btn">Cancel</button>
-    <button class="btn btn-blue">Submit form</button>
-  </div>
-</div>
-
-<footer></footer>
-</div>
-<script src="script.js"></script>
+  <footer></footer>
+  
 </body>
 </html>
