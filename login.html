@@ -4,29 +4,26 @@
   <meta charset="UTF-8">
   <title>Login - Bugiz</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body class="login-body">
 
   <div class="login-container">
     <div class="login-card">
 
-      <div class="login-logo">
-        ⬛ Bugiz
-      </div>
+      <div class="login-logo">⬛ Bugiz</div>
 
       <h2>Log In</h2>
       <p class="login-subtitle">Sign in to manage your projects and tickets</p>
 
-      <input type="text" placeholder="Username">
-      <input type="password" placeholder="Password">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
 
       <div class="btn-row">
-        <button class="btn btn-black">Cancel</button>
-        <a href="view-all.html" class="btn btn-blue">Confirm</a>
+        <button class="btn btn-black" onclick="clearLogin()">Cancel</button>
+        <a class="btn btn-blue" onclick="login()">Confirm</a>
       </div>
-
     </div>
   </div>
-<script src="script.js"></script>
 </body>
 </html>
