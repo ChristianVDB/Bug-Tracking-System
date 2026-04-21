@@ -1,10 +1,3 @@
-/* RESET */
- {
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 /* APP BACKGROUND */
 body {
@@ -13,7 +6,6 @@ body {
   background: linear-gradient(180deg, #d6e1f7, #2e3e5c);
   color: #333;
 }
-
 
 /* ===== SIDEBAR ===== */
 .sidebar {
@@ -94,8 +86,6 @@ body {
     line-height: normal; 
 }
 
-
-
 .profile {
   display: flex;
   align-items: center;
@@ -108,6 +98,17 @@ body {
   height: 42px;
   background: #111;
   border-radius: 50%;
+}
+
+.small-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 /* ===== CONTENT ===== */
@@ -148,8 +149,6 @@ h1 {
     margin-bottom: 14px;
 }
 
-
-
 .table-header div,
 .ticket-row div {
     display: flex;
@@ -158,9 +157,6 @@ h1 {
     text-align: left;
 }
 
-
-
-
 /* ===== AVATARS ===== */
 .small-avatar {
     width: 36px;
@@ -168,7 +164,6 @@ h1 {
     background: #111; 
     border-radius: 50%;
 }
-
 
 /* ===== FORMS ===== */
 .form-center {
@@ -182,7 +177,6 @@ h1 {
     
 position: relative;
     z-index: 1;
-
 }
 
 .form-row {
@@ -204,11 +198,11 @@ select {
 textarea {
   min-height: 120px;
 }
+
 h1 {
     margin-bottom: 35px;
     font-size: 34px;
 }
-
 
 /* ===== BUTTONS ===== */
 .btn-row {
@@ -269,12 +263,12 @@ h1 {
 
 /* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(180deg, #2e3e5c, #d6e1f7);
-
+  background: linear-gradient(180deg, #2e3e5c, #d6e1f7);
   text-align: center;
   padding: 16px;
   font-size: 14px;
 }
+
 .status-dropdown {
   width: 100%;
   max-width: 100%;
@@ -301,7 +295,6 @@ footer {
 }
 
 /* ===== LOGIN PAGE ===== */
-
 .login-body {
   min-height: 100vh;
   background:
@@ -312,8 +305,6 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
-
 
 .login-container {
   width: 100%;
@@ -365,8 +356,8 @@ footer {
   margin: 6px;
   width: 120px;
 }
-/* ===== STATUS BUTTONS (INTERACTIVE) ===== */
 
+/* ===== STATUS BUTTONS (INTERACTIVE) ===== */
 .status-buttons {
     display: flex;
     gap: 16px;
@@ -413,4 +404,33 @@ footer {
     transform: scale(1.1);
     opacity: 1;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.ticket-info-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.ticket-info-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket-info-row strong {
+  color: #2e3e5c;
+}
+
+.ticket-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1600px;
 }
