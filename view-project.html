@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="view-project">
+
+<!-- NAV -->
+<!-- (paste shared navbar here) -->
+  <div class="sidebar">
+    <div class="logo">⬛ Bugiz</div>
+
+    <a href="view-all.html" class="nav-item"><strong>Tickets</strong></a>
+    <a href="projects.html" class="nav-item">Projects</a>
+  
+    <select 
+      id="status-nav" 
+      class="status-dropdown"
+      onchange="if (this.value) window.location.href = this.value;"
+    >
+      <option value="">Status</option>
+      <option value="completed.html">Completed</option>
+      <option value="in-progress.html">In Progress</option>
+      <option value="overdue.html">Overdue</option>
+    </select>
+
+    <a href="create-ticket.html" class="nav-item">Create Ticket</a>
+    <a href="create-project.html" class="nav-item">Create Project</a>
+    <a href="create-user.html" class="nav-item">Create User</a>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="search">
+        <input id="searchTicketInput" placeholder="Search Tickets">
+      </div>
+      <div class="profile">
+        <div class="avatar"></div>
+        <div>UserName<br>
+        <a href="login.html">Log out</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content">
+
+    <h1>View Project</h1>
+
+    <div class="ticket-card">
+      <div class="ticket-info-row">
+        <div><strong>Project:</strong> <span id="view-name"></span></div>
+        <div><strong>Status:</strong> <span id="view-status"></span></div>
+        <div><strong>Ticket Count:</strong> <span id="view-count"></span></div>
+        <div><strong>ID:</strong> <span id="view-id"></span></div>
+      </div>
+
+      <div class="section">
+        <h3>Summary</h3>
+        <p id="view-summary"></p>
+      </div>
+
+      <div class="section">
+        <h3>Description</h3>
+        <p id="view-description"></p>
+      </div>
+
+    </div>
+  </div>
+  <footer></footer>
+  
+</body>
+</html>
