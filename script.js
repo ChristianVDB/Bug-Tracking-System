@@ -685,7 +685,7 @@ function login() {
         Storage.saveData("loggedIn", true);
 
         // Redirect to main page
-        window.location.href = "view-all.html";
+        window.location.href = "index.html";
     } else {
         // Wrong credentials message
         alert("Incorrect username or password.");
