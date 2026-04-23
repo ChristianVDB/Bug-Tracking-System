@@ -1059,3 +1059,5 @@ function loadViewProject() {
     document.getElementById("view-summary").textContent = project.summary;
     document.getElementById("view-description").textContent = project.description;
 }
+
+window.location.href = "/Bug-Tracking-System/login.html";
