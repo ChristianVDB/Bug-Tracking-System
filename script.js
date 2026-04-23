@@ -1,3 +1,6 @@
+
+
+
 // ==========================
 // STORAGE HANDLER (LocalStorage)
 // ==========================
@@ -147,6 +150,100 @@ function Ticket(summary, description, reporter, date, project, developer, status
     this.status = status;
     this.id = new Date(date).getTime(); // unique ID
 }
+
+function intitalLoad(){
+Storage.saveData("users", [
+    { "id": "1", "name": "John", "surname": "Smith", "username": "JohnSmith", "password": "JohnSmith1234", "email": "JohnSmith@bugiz.com" },
+
+    { "id": "2", "name": "Emily", "surname": "Johnson", "username": "emjohnson", "password": "Emily4321", "email": "EmilyJohnson@bugiz.com" },
+
+    { "id": "3", "name": "Micheal", "surname": "Brown", "username": "mbrown", "password": "Brown4444", "email": "MichealBrown@bugiz.com" },
+
+    { "id": "4", "name": "Sarah", "surname": "Williams", "username": "swilliams", "password": "SarahPass", "email": "SarahWilliams@bugiz.com" },
+
+    { "id": "5", "name": "David", "surname": "Davis", "username": "ddavis", "password": "ddP@ss", "email": "DavidDavis@bugiz.com" },
+
+    { "id": "6", "name": "Olivia", "surname": "Taylor", "username": "otaylor", "password": "Olivia123", "email": "OliviaTaylor@bugiz.com" },
+
+    { "id": "7", "name": "James", "surname": "Wilson", "username": "jwilson", "password": "JamesPass7", "email": "JamesWilson@bugiz.com" },
+
+    { "id": "8", "name": "Ava", "surname": "Martinez", "username": "amartinez", "password": "AvaM2026", "email": "AvaMartinez@bugiz.com" },
+
+    { "id": "9", "name": "Liam", "surname": "Anderson", "username": "landerson", "password": "LiamSecure9", "email": "LiamAnderson@bugiz.com" },
+
+    { "id": "10", "name": "Sophia", "surname": "Thomas", "username": "sthomas", "password": "SophiaT10", "email": "SophiaThomas@bugiz.com" }
+]);
+
+
+Storage.saveData("projects", [
+
+    { "id": "PJ001", "name": "Website Revamp", "summary": "Improve UI and UX of main website", "description": "Full redesign of the company website including layout, colors, and responsiveness.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ002", "name": "Admin Dashboard", "summary": "Build admin control panel", "description": "Create a dashboard for managing users, tickets, and system analytics.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ003", "name": "Mobile App", "summary": "Develop cross-platform mobile app", "description": "Build a mobile application for both Android and iOS using a shared codebase.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ004", "name": "Bug Tracking System", "summary": "Internal ticket system", "description": "Create a system to track bugs, assign developers, and manage workflows.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ005", "name": "API Integration", "summary": "Connect external APIs", "description": "Integrate third-party APIs for payments, authentication, and data services.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ006", "name": "User Authentication System", "summary": "Secure login and registration system", "description": "Implement JWT-based authentication with role-based access control.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ007", "name": "Payment Gateway Setup", "summary": "Integrate online payments", "description": "Add Stripe and PayPal support for processing transactions securely.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ008", "name": "Analytics Platform", "summary": "Data visualization dashboard", "description": "Build charts and reporting tools for system usage analytics.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ009", "name": "Notification System", "summary": "Email and push alerts", "description": "Create a unified notification service for emails and mobile push alerts.", "status": "Active", "ticketCount": 0 },
+
+    { "id": "PJ010", "name": "Performance Optimization", "summary": "Improve system speed", "description": "Optimize backend queries and frontend rendering for faster load times.", "status": "Active", "ticketCount": 0 }
+]);
+
+
+Storage.saveData("tickets", [
+
+    { "summary": "Login page not responsive", "description": "The login page breaks on mobile screens", "reporter": "John Smith", "date": "2026-04-01", "project": "Website Revamp", "developer": "Emily Johnson", "status": "Overdue", "id": 1775001600000 },
+
+    { "summary": "Navbar alignment issue", "description": "Navbar items are misaligned on Safari", "reporter": "Michael Brown", "date": "2026-04-02", "project": "Website Revamp", "developer": "David Davis", "status": "Overdue", "id": 1775088000000 },
+
+    { "summary": "Dashboard stats not loading for all users", "description": "API returns null for analytics widgets", "reporter": "Sarah Williams", "date": "2026-04-03", "project": "Admin Dashboard", "developer": "John Smith", "status": "In Progress", "id": 1775174400000 },
+
+    { "summary": "Export to CSV broken", "description": "Download button does not trigger file export", "reporter": "Emily Johnson", "date": "2026-04-04", "project": "Admin Dashboard", "developer": "Michael Brown", "status": "Completed", "id": 1775260800000 },
+
+    { "summary": "App crash on startup", "description": "Mobile app crashes immediately after launch", "reporter": "David Davis", "date": "2026-04-05", "project": "Mobile App", "developer": "Sarah Williams", "status": "Overdue", "id": 1775347200000 },
+
+    { "summary": "Push notifications not working", "description": "Users not receiving notifications", "reporter": "John Smith", "date": "2026-04-06", "project": "Mobile App", "developer": "Emily Johnson", "status": "In Progress", "id": 1775433600000 },
+
+    { "summary": "Duplicate bug reports", "description": "System allows duplicate bug entries", "reporter": "Michael Brown", "date": "2026-04-07", "project": "Bug Tracking System", "developer": "Sarah Williams", "status": "In Progress", "id": 1775520000000 },
+
+    { "summary": "Filter not working", "description": "Bug filter does not update results correctly", "reporter": "Sarah Williams", "date": "2026-04-08", "project": "Bug Tracking System", "developer": "David Davis", "status": "Completed", "id": 1775606400000 },
+
+    { "summary": "API authentication failure on windows", "description": "Token expires immediately after login", "reporter": "Emily Johnson", "date": "2026-04-09", "project": "API Integration", "developer": "John Smith", "status": "Overdue", "id": 1775692800000 },
+
+    { "summary": "Slow API response time", "description": "Requests take over 5 seconds", "reporter": "David Davis", "date": "2026-04-10", "project": "API Integration", "developer": "Michael Brown", "status": "In Progress", "id": 1775779200000 },
+
+    { "summary": "Login authentication fails intermittently", "description": "Users randomly unable to log in", "reporter": "Olivia Taylor", "date": "2026-04-11", "project": "User Authentication System", "developer": "James Wilson", "status": "In Progress", "id": 1775865600000 },
+
+    { "summary": "Password reset email not sent", "description": "Reset email not delivered", "reporter": "James Wilson", "date": "2026-04-12", "project": "User Authentication System", "developer": "Emily Johnson", "status": "Overdue", "id": 1775952000000 },
+
+    { "summary": "Payment page crashes on submit", "description": "Checkout error on payment", "reporter": "Ava Martinez", "date": "2026-04-13", "project": "Payment Gateway Setup", "developer": "Michael Brown", "status": "Overdue", "id": 1776038400000 },
+
+    { "summary": "Stripe webhook not receiving events", "description": "Webhook not triggered", "reporter": "Liam Anderson", "date": "2026-04-14", "project": "Payment Gateway Setup", "developer": "Sarah Williams", "status": "In Progress", "id": 1776124800000 },
+
+    { "summary": "Dashboard charts not rendering", "description": "Graphs fail to load", "reporter": "Sophia Thomas", "date": "2026-04-15", "project": "Analytics Platform", "developer": "David Davis", "status": "In Progress", "id": 1776211200000 },
+
+    { "summary": "Incorrect user metrics displayed", "description": "Analytics mismatch", "reporter": "Emily Johnson", "date": "2026-04-16", "project": "Analytics Platform", "developer": "Olivia Taylor", "status": "Overdue", "id": 1776297600000 },
+
+    { "summary": "Email notifications delayed", "description": "Emails sent late", "reporter": "Michael Brown", "date": "2026-04-17", "project": "Notification System", "developer": "James Wilson", "status": "In Progress", "id": 1776384000000 },
+
+    { "summary": "Push notifications not delivered on iOS", "description": "iOS push failing", "reporter": "Sarah Williams", "date": "2026-04-18", "project": "Notification System", "developer": "Ava Martinez", "status": "Completed", "id": 1776470400000 },
+
+    { "summary": "Slow page load on admin dashboard", "description": "Dashboard lagging", "reporter": "David Davis", "date": "2026-04-19", "project": "Performance Optimization", "developer": "Liam Anderson", "status": "In Progress", "id": 1776556800000 },
+
+    { "summary": "Excessive database query time", "description": "API too slow", "reporter": "John Smith", "date": "2026-04-20", "project": "Performance Optimization", "developer": "Sophia Thomas", "status": "Overdue", "id": 1776643200000 }
+]);
+}
+
+window.onload = intitalLoad();
 
 // Create a new user and save it to storage
 // ==========================
