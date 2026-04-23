@@ -685,7 +685,7 @@ function login() {
         Storage.saveData("loggedIn", true);
 
         // Redirect to main page
-        window.location.href = "/Bug-Tracking-System/view-all.html";
+        window.location.href = "view-all.html";
     } else {
         // Wrong credentials message
         alert("Incorrect username or password.");
@@ -709,7 +709,7 @@ function checkLogin() {
     // If not logged in, force redirect to login page
     if (loggedIn !== true) {
         Storage.saveData("loggedIn", false);
-        window.location.href = "/Bug-Tracking-System/login.html";
+        window.location.href = "login.html";
     }
 }
 
@@ -862,7 +862,7 @@ function saveEditTicketID(id) {
     Storage.saveData("editTicketId", id);
 
     // Redirect to ticket creation/edit form page
-    window.location.href = "/Bug-Tracking-System/create-ticket.html";
+    window.location.href = "create-ticket.html";
 }
 
 // Load ticket data into edit form
@@ -930,7 +930,7 @@ function saveEditProjectID(id) {
     Storage.saveData("editProjectId", id);
 
     // Redirect to project creation/edit page
-    window.location.href = "/Bug-Tracking-System/create-project.html";
+    window.location.href = "create-project.html";
 }
 
 // Load project data into edit form
@@ -979,7 +979,7 @@ function viewTicket(id) {
     Storage.saveData("viewTicketId", id);
 
     // Redirect to view page
-    window.location.href = "/Bug-Tracking-System/view-ticket.html";
+    window.location.href = "view-ticket.html";
 }
 
 // Load ticket details onto view page
@@ -1022,7 +1022,7 @@ function viewProject(id) {
     Storage.saveData("viewProjectId", id);
 
     // Redirect to project view page
-    window.location.href = "/Bug-Tracking-System/view-project.html";
+    window.location.href = "view-project.html";
 }
 
 // Load project details onto view page
@@ -1059,4 +1059,4 @@ function loadViewProject() {
     document.getElementById("view-summary").textContent = project.summary;
     document.getElementById("view-description").textContent = project.description;
 }
-window.location.href = "/Bug-Tracking-System/login.html";
+
